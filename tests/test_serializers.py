@@ -4,7 +4,11 @@ from __future__ import (absolute_import, division, print_function,
 
 import json
 import pickle
-import queue
+try:
+    import queue
+except:
+    # Python2
+    import Queue as queue
 import unittest
 
 from rq.serializers import resolve_serializer

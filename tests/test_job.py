@@ -4,7 +4,12 @@ from __future__ import (absolute_import, division, print_function,
 
 import json
 import time
-import queue
+try:
+    import queue
+except:
+    # Python2
+    import Queue as queue
+
 import zlib
 from datetime import datetime
 
